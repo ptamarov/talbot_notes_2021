@@ -1,0 +1,411 @@
+\documentclass[a4paper, twoside]{article} 
+
+% for print
+\usepackage[
+	top = 1.15 in, 
+	bottom = 1.25 in,
+	left = 1.15 in, 
+	right = 1.15 in,
+	includehead]{geometry}
+% font sizes
+\usepackage{scrextend}
+\changefontsizes{11pt}
+ 
+\usepackage[all]{nowidow}
+
+\usepackage[utf8x]{inputenc}
+\usepackage{amsfonts,amssymb,amsmath}
+\usepackage{amsrefs}
+\usepackage{url}
+
+\BibSpec{article}{%
+    +{}  {\PrintAuthors}                {author}
+    +{,} { \textit}                     {title}
+    +{.} { }                            {part}
+    +{:} { \textit}                     {subtitle}
+    +{,} { \PrintContributions}         {contribution}
+    +{.} { \PrintPartials}              {partial}
+    +{,} { }                            {journal}
+    +{}  { \textbf}                     {volume}
+    +{}  { \PrintDatePV}                {date}
+    +{,} { \issuetext}                  {number}
+    +{,} { \eprintpages}                {pages}
+    +{,} { }                            {status}
+    +{,} { \url}                        {url}    % <---- ADDED
+    +{,} { \PrintDOI}                   {doi}
+    +{,} { available at \eprint}        {eprint}
+    +{}  { \parenthesize}               {language}
+    +{}  { \PrintTranslation}           {translation}
+    +{;} { \PrintReprint}               {reprint}
+    +{.} { }                            {note}
+    +{.} {}                             {transition}
+    +{}  {\SentenceSpace \PrintReviews} {review}
+}
+
+\usepackage{graphicx}
+\usepackage[
+	%spanish.lcroman,
+	british]{babel}
+\usepackage{caption}
+%\usepackage{paragraphs}
+\usepackage{mathdots}
+\usepackage{mathtools} 
+\usepackage{mathbbol}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{booktabs}
+%
+%\newcommand{\mathsymbol}[2]{
+%	\begin{tikzpicture}
+%        \node at(0,0){};
+%        \node at#1{$#2$};
+%    \end{tikzpicture}
+%}
+
+%white star
+\usepackage{bbding}
+\newcommand{\wstar}{\mathbin{\text{\tiny\FiveStarOpen}
+}}
+
+\usepackage{xcolor}
+% Link colors and styles, change accordingly, these are the official colours of Trinity 
+\definecolor{trinityblue}{rgb}{0.05, 0.45,0.75}
+\definecolor{trinitygray}{rgb}{0.33, 0.34,0.35}
+
+
+% front matter stlye 
+\renewenvironment{abstract}{%
+\small\begin{center}
+\begin{minipage}{.9\textwidth}
+%\textbf{\textcolor{newcol}{Abstract.}}
+}
+{\par\noindent\end{minipage}\end{center}\vspace{3 em}}
+%
+\makeatletter
+\renewcommand\@maketitle{%
+\hfill
+\begin{center}\begin{minipage}{0.9 	\textwidth}
+\centering
+\vskip 2em
+\let\footnote\thanks 
+{\LARGE \@title \par }
+\vspace{-.5 em}
+%\hrulefill
+\vskip 1 em
+{\large \@author \par}
+\vspace{3.5 em}
+
+\end{minipage}\end{center}
+\par
+}
+\makeatother
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\usepackage{tikz-cd}
+%\usetikzlibrary{calc}
+\usetikzlibrary{matrix,arrows}
+\usepackage{stackrel}
+
+\usepackage[shortlabels]{enumitem} %nice lists
+\usepackage{stmaryrd} %double brackets
+\usepackage{setspace} %line spacing
+\spacing{1.15}
+%\onehalfspacing
+%\setlength{\parskip}{.35 em}
+\usepackage{etoolbox}
+\usetikzlibrary{trees}
+
+% textual claims in equations
+\newcommand\claim[2][.8]{%
+  \begin{minipage}{#1\displaywidth}%
+  \itshape
+  #2
+  \end{minipage}%
+}
+
+% lists
+\usepackage{enumitem}
+\listfiles
+\setlist[enumerate]{label= (\arabic*)}
+
+% smaller sep in enumerate
+\newenvironment{tenumerate}{
+\begin{enumerate}
+  \setlength{\itemsep}{0pt}
+  \setlength{\parskip}{0pt}
+}{\end{enumerate}}
+
+% smaller sep in itemize
+\newenvironment{titemize}{
+\begin{itemize}
+  \setlength{\itemsep}{0pt}
+  \setlength{\parskip}{0pt}
+}{\end{itemize}}
+\patchcmd{\section}{\normalfont}{\normalfont\large}{}{}
+
+% fourier
+%\usepackage{fourier}
+%\usepackage[T1]{fontenc}
+
+% nimbus roman
+\usepackage{mathptmx}
+\usepackage[T1]{fontenc}
+
+% customize fonts 
+\usepackage[bb=ams, cal=euler, scr=rsfso , frak=euler]{mathalfa}
+
+\usepackage{wrapfig, framed, caption}
+
+% running color in paper
+\definecolor{newcol}{rgb}{0,0,0}
+%{0.03, 0.27, 0.49}
+
+% fancy headers setup
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead[RE]{\small\it Little disks operads and
+configuration spaces}
+\fancyhead[LO]{\small\it Viva Talbot 2021}
+\fancyhead[RO,LE]{\small\textbf{\thepage}}
+\renewcommand{\headrulewidth}{0 pt}
+\cfoot{}
+
+\fancypagestyle{frontpage}{% use whatever name you please
+  \fancyhf{}% clear all the headers and footers
+  % now define the contents of the various fields
+  \fancyfoot[C]{\thepage}%
+  % 
+}
+
+\usepackage{letltxmacro}
+
+%\AtBeginDocument{%
+%    \LetLtxMacro\refa{\ref}%
+%    \DeclareRobustCommand{\ref}[2][]{(\refa#1{#2})}%
+%}
+%
+
+\usepackage[pdftex, colorlinks,bookmarks 
+= true,bookmarksnumbered = true]{hyperref}
+
+% let \[ and \] be the same as \begin{equation} and \end{equation}
+\makeatletter
+\AtBeginDocument{%
+  \let\[\@undefined
+  
+\DeclareRobustCommand{\[}{\begin{equation}}%
+  \let\]\@undefined
+  
+  \DeclareRobustCommand{\]}{\end{equation}}%
+}
+\makeatother 
+% but only print equation numbers if needed
+%\mathtoolsset{showonlyrefs,showmanualtags}
+
+\usepackage{stmaryrd}
+\usepackage{amsthm}
+\usepackage{thmtools}
+
+% theorem style
+\newtheoremstyle{mytheorem}
+  {\topsep}   % ABOVESPACE
+  {\topsep}   % BELOWSPACE
+  {\itshape}  % BODYFONT
+  {0pt}       % INDENT (empty value is the same as 0pt)
+  {\bfseries\color{newcol}} % HEADFONT
+  {%\color{newcol}{.}
+  }         % HEADPUNCT
+  {5pt plus 1pt minus 1pt} % HEADSPACE
+  {}          % CUSTOM-HEAD-SPEC
+
+\theoremstyle{mytheorem}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{cor}[theorem]{Corollary}
+\newtheorem{prop}[theorem]{Proposition}
+
+% definition style
+\newtheoremstyle{mydefinition}
+  {\topsep}   % ABOVESPACE
+  {\topsep}   % BELOWSPACE
+  {}  % BODYFONT
+  {0pt}       % INDENT (empty value is the same as 0pt)
+  {\bfseries\color{newcol}} % HEADFONT
+  {\color{newcol}}         % HEADPUNCT
+  {5pt plus 1pt minus 1pt} % HEADSPACE
+  {}          % CUSTOM-HEAD-SPEC
+  
+\theoremstyle{mydefinition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{observation}[theorem]{Observation}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{problem}[theorem]{Problem}
+
+% named theorem %
+% for specifying a name
+\theoremstyle{plain} % just in case the style had changed
+\newcommand{\thistheoremname}{}
+\newtheorem{genericthm}[theorem]{\thistheoremname}
+\newenvironment{namedthm}[1]
+  {\renewcommand{\thistheoremname}{#1}%
+   \begin{genericthm}}
+  {\end{genericthm}}
+
+% url colors
+\hypersetup{colorlinks,
+	linkcolor={trinityblue},
+		citecolor={trinityblue},
+			urlcolor={trinityblue}}  
+
+
+\newtheoremstyle{mytheorem2}
+  {\topsep}   % ABOVESPACE
+  {\topsep}   % BELOWSPACE
+  {\itshape}  % BODYFONT
+  {0pt}       % INDENT (empty value is the same as 0pt)
+  {\bfseries\color{newcol}} % HEADFONT
+  {\color{newcol}{.}
+  }         % HEADPUNCT
+  {5pt plus 1pt minus 1pt} % HEADSPACE
+  {}          % CUSTOM-HEAD-SPEC
+
+
+\theoremstyle{mytheorem2}
+\newtheorem*{theorem*}{Theorem}
+\newtheorem*{lemma*}{Lemma}
+\newtheorem*{corollary*}{Corollary}
+\newtheorem*{conjecture*}{Conjecture}
+\newtheorem*{question*}{Question}
+
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}
+
+% command macros
+%\renewcommand{\qedsymbol}{$\blacktriangleleft$}
+
+% generic stuff
+\newcommand\place{\mathord-}
+\newcommand{\imor}{\interleave\kern-.45em\longrightarrow}
+\newcommand{\vv}{\vert}
+\newcommand{\Conf}{\operatorname{Conf}}
+\newcommand{\Map}{\operatorname{Map}}
+\newcommand{\Emb}{\operatorname{Emb}}
+\newcommand{\Imm}{\operatorname{Imm}}
+\newcommand{\dd}{\partial}
+\newcommand{\?}{\,?\,}
+\newcommand{\NN}{\mathbb N}
+\renewcommand{\k}{[k]}
+\newcommand{\n}{[n]}
+\newcommand{\kk}{\Bbbk}
+
+% special fonts for categories
+\newcommand\cat[1]{\mathsf{#1}}
+\newcommand\spe[1]{\mathbf{#1}}
+\newcommand\bicom[1]{{{}^{#1}\category{Mod}\mkern1mu{}^{#1}}}
+\newcommand{\kMod}{{}_\kk\cat{Mod}}
+\newcommand{\kmod}{{}_\kk\cat{mod}}
+\newcommand{\kCh}{{}_\kk\cat{Ch}}
+\newcommand{\Sp}{\cat{Sp}}
+\newcommand{\kSp}{{}_\kk\cat{Sp}}
+
+% operads stuff
+\newcommand\oper[1]{\mathsf{#1}}
+\newcommand{\antishriek}{\text{\raisebox{\depth}{\textexclamdown}}}
+\newcommand\id{\mathrm{id}}
+\newcommand{\Def}{\mathsf{Def}}
+\newcommand{\Der}{\operatorname{Der}}
+\newcommand{\Coder}{\operatorname{Coder}}
+\newcommand\Cob[1]{\Omega{#1}}
+\newcommand\A{\mathsf{As}}
+\newcommand\C{\mathsf{Com}}
+ 
+
+%% SMALL HYPHEN %%
+\mathchardef\hy="2D % Define a "math hyphen"
+\newcommand\Alg{\hy\mathsf{Alg}}
+
+\newcommand\F{\mathcal{F}}
+\renewcommand\P{\mathcal{P}}
+\newcommand{\Op}{\mathsf{Op}}
+\newcommand{\OO}{\mathcal{O}}
+\newcommand\QQ{\mathcal{Q}}
+\newcommand\PL{\mathsf{PreLie}_{\NN}}
+\newcommand\PA{\mathsf{Perm}_{\NN}}
+%homological algebra
+\newcommand{\Cxs}{\mathsf{Ch}}
+\newcommand{\Tot}{\operatorname{Tot}}
+\newcommand{\Ad}{\operatorname{Ad}}
+\newcommand{\g}{\mathfrak g}
+\newcommand{\coker}{\operatorname{coker}}
+\newcommand{\HH}{\mathrm{HH}}
+\newcommand{\gr}{\mathrm{gr}\,}
+\newcommand{\HC}{\mathrm{HC}}
+\renewcommand{\H}{\mathrm{H}}
+\newcommand{\Sq}{\operatorname{Sq}}
+\newcommand{\Ho}{\operatorname{Ho}}
+\renewcommand{\tt}{\otimes}
+\newcommand{\Ext}{\operatorname{Ext}}
+\newcommand{\Tor}{\operatorname{Tor}}
+\newcommand{\End}{\operatorname{End}}
+\newcommand\hoc[1]{\operatorname{hocof}{#1}}
+
+\usepackage[new]{old-arrows} %% allows long hook arrow
+
+% new definition font
+\DeclareTextFontCommand{\new}{\color{newcol}\em}
+
+
+% author information 
+\newcommand{\Addresses}{{% additional braces for segregating \footnotesize
+  \bigskip
+  \footnotesize
+
+  \textsc{22 Inselstrasse, Leipzig, Germany}\par\nopagebreak
+  \textit{E-mail address:} \texttt{tamaroff@mis.mpg.de}
+  }}
+  
+ 
+\usepackage{sectsty}
+\chapterfont{\color{newcol}}  % sets colour of chapters
+\sectionfont{\color{newcol}}  % sets colour of sections
+\subsectionfont{\color{newcol}}  % sets colour of sections
+ 
+%%%% Table of Contents Style %%%%%
+ 
+% style for titles of sections
+\usepackage{titletoc}
+\titlecontents{chapter}
+[0.2em] %
+{\bigskip}
+%{\contentslabel[\thecontentslabel.]{2em}\hspace{0.667em}}%\thecontentslabel
+{\makebox[2em][r]{\thecontentslabel.}\hspace{0.333em}}%\thecontentslabel
+{\hspace*{-2em}}
+{\hfill\contentspage}[\smallskip]
+
+\titlecontents{section}% <section>
+[0.2em]% <left>
+{\small}% <above-code>
+{\thecontentslabel.\hspace{3pt}}%<numbered-entry-format>; you could also 
+%use  {\thecontentslabel. } to show the numbers
+{}% <numberless-entry-format>
+{\enspace\titlerule*[0.5pc]{.}\contentspage}%<filler-page-format>
+\titlecontents*{subsection}% <section>
+[1 em]% <left>
+{\footnotesize}% <above-code>
+{\thecontentslabel. \hspace{3pt}}% <numbered-entry-format>; you could also 
+%use {\thecontentslabel. } to show the numbers
+{}% <numberless-entry-format>
+{}% <filler-page-format>
+[ --- \ ]% <separator>
+[]% <end>
+\setcounter{tocdepth}{2}% Display up to \subsection in ToC
+
+
+\setlength\parindent{0 em}
+\setlength\parskip{3 pt}
+
+\raggedbottom 
+%\makeindex

@@ -1,0 +1,308 @@
+\include{PREAMBLE}
+
+\title{\setstretch{0.9} %will give nice line sep
+	\textbf{Little disks operads and configuration spaces}}
+\author{Notes by Pedro Tamaroff}
+\date{}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+\textbf{Speaker's abstract.} Operads are objects that govern categories of algebras. Initially introduced in the sixties to study iterated loop spaces, they have proved useful in several areas of mathematics. In most of these applications, the little disks operads play a central role. In the first part of this talk, we will focus on one of the applications studied in the 2015 Talbot Workshop, Goodwillie--Weiss embedding calculus, which will serve as an ``excuse'' to introduce operads. In the second part of this talk, I will set out some of the recent developments regarding the links between the little disks operads and the real homotopy types of configuration spaces of manifolds. (Second part based on joint works with Ricardo Campos, Julien Ducoulombier, Pascal Lambrechts, and Thomas Willwacher.)	
+\end{abstract}
+\bigskip
+\tableofcontents
+
+\thispagestyle{frontpage}
+%\pagebreak
+
+\section{The embedding calculus}
+ 
+ The motivation to construct the
+ embedding calculus on manifolds is 
+ the computation of the homotopy type of
+ the space $\Emb(M,N)$ of 
+ all embeddings $f : M\longrightarrow N$ of one
+ manifold into another. Recall that $f$ is
+ an \emph{immersion} if its derivative
+ $T_pf : T_p M\longrightarrow T_q N$ is 
+ injective at each $p\in M$, and it is a (smooth)
+ \emph{embedding} if it is an immersion and a 
+ topological embedding.
+ 
+ The computation of such space $\Emb(M,N)$ of
+ embeddings is highly non-trivial: if $M=S^1$ and 
+ $N=S^3$, then the $0$th homotopy group
+ $\pi_0\Emb(S^1,S^3)$ consists of all isotopy
+ classes of smooth knots, and determining and
+ studying these already spans a whole area of
+ mathematics, knot theory. 
+ 
+ The fact the previous example is slightly involved
+ stems from the fact that the codimension of 
+ $S^1$ in $S^3$ is two: as soon as $M$ has
+ codimension at least three in $N$, then $\Emb(M,N)$
+ is a path connected space. For example, one can
+ unknot any embedding $S^1\longrightarrow S^4$.
+ Nonetheless, higher homotopy and homology groups
+ of $\Emb(M,N)$ are non-trivial, and give interesting
+ and fine invariants of $M$ and $N$ that depend on 
+ their smooth structure of them, and not only on
+ their homotopy type. 
+ 
+ The immediate problem one encounters when trying
+ to compute with the functor $\Emb(-,N)$ is that it
+ not continuous (in the categorical sense): if
+ $M$ is a union of submanifolds $V\cup U$ then
+ $\Emb(M,N)$ is \emph{not} equal to the pullback
+ of the cospan
+ 
+ \[
+ \begin{tikzcd}
+  \Emb(V,N) &  \arrow[r]  \Emb(U\cap V,N)
+ \arrow[l]       &  \Emb(U, N).
+ \end{tikzcd}
+ 	 	  	\]
+ 	 	  	
+ Concretely, if one is able to build embeddings
+ $V\hookrightarrow N$ and $U\hookrightarrow N$
+ that coincide in $V\cap U$,
+ it is not always possible to extend them to an
+ embedding defined on $M=V\cup U$: the resulting
+ map will be an immersion, but may fail to be
+ injective on $U\cap V$. 
+ 
+ The idea of Goodwillie--Weiss calculus is to 
+ \emph{approximate} the functor $F :M\longmapsto
+ \Emb(M,N)$ by a tower of functors
+ \[\label{eq:tower} \cdots 
+ \longrightarrow F_4 	
+ \longrightarrow F_3 	
+ \longrightarrow F_2 	
+ 	\longrightarrow F_1 	
+ 		\longrightarrow F_0   \] 
+ under $F$ that are, in a precise sense, polynomial functors.
+ As a first step, one can consider the space of 
+ \emph{immersions} $M\longrightarrow N$, which is
+ polynomial of order one or, what is the same,
+ linear, in the sense that $\Imm(M,N)$ is
+ the limit of the span
+  \[
+ \begin{tikzcd}
+  \Imm(V,N) &  \arrow[r]  \Imm(U\cap V,N)
+ \arrow[l]       &  \Imm(U, N).
+ \end{tikzcd}
+ 	 	  	\]
+ To define what it means for a functor to be ``of
+ order at most $k$'' for some $k\in \NN$ requires
+ a bit more care, an involves the combinatorics of
+ cubical posets. We point the reader to~\cite{Calculus}
+ for details. Informally, the cornerstone of the
+ Goodwillie--Weiss calculus is the following 
+ result:
+ 
+ \begin{theorem*}
+ Let $F(V) = \Emb(V,N)$ and suppose that $M$ has codimension
+ at least three in $N$. There exists a tower
+ of functors over $F$ as in~\eqref{eq:tower} such that the
+ map
+ \[ F(M) \longrightarrow \operatorname{holim}_k F_k(M)\]
+  restricts to a homotopy equivalence of the base
+  point components. \textcolor{trinityblue}{Moreover,
+  the (homotopy type of the?) functors $F_k(M)$ can be 
+  computed in some way using configurations of $k$ points
+  of $M$ in $N$.}\qed
+   \end{theorem*}
+ 
+  We will in fact take a slightly different approach,
+  and use little disks operads and configuration spaces of
+  points to obtain a description of the homotopy type of
+  $\Emb(M,N)$.
+  
+ \section{Configuration spaces of points}
+  
+  Not the original work of Goodwillie--Weiss but the
+ result of a refinement of their work over the years. 
+  Span of maybe two decades. 
+  
+  We now aim to approximate $\Emb(M,N)$ using
+  \emph{configurations spaces}. For each $r\in \NN$,
+  we define the \emph{ordered configuration space of
+  $r$ points in $M$} by
+  \[ \Conf_M(r) = 
+  	\{ (x_1,\ldots,x_r)\in M^r 
+  	: \text{ $x_i\neq x_j$ for all $i\neq j$} \}. 
+  \]
+  They appeared initially in the study of braids and
+  braid groups by [Name?], and later in the work
+  of Fadell--Neuwirth and V. I. Arnol'd.  Note that,
+  more or less by definition, one has
+  that the braid group $B_r$ is equal to 
+  $\pi_1(\Conf_{D^2}(r))$  
+  
+ The sequence of spaces $(\Conf_M(r))_{r\geqslant 0}$
+ forms a \emph{symmetric sequence} in spaces, that is, 
+ it is a sequence of spaces with corresponding actions
+ of the symmetric groups, and we will write it $\Conf_M$. 
+ They allow us to embed $\Emb(M,N)$ into
+ \[ \Map_\Sigma(\Conf_M,\Conf_N) = 
+ 	\prod_{r\geqslant 0}
+ 		\hom_{\Sigma_r}(\Conf_M(r),\Conf_N(r))\] 
+by assigning an embedding $f:M\longrightarrow N$
+to the map $\Phi_f$ that assigns a 
+configuration $(x_1,\ldots,x_r)$
+in $M$ to the configuration $(f(x_1),\ldots,f(x_r))$. 
+There are corresponding constructions
+for unframed manifolds. The maps $\Phi_f$ coming from embeddings $f:M\longrightarrow N$
+enjoy some additional compatibility properties:
+\begin{tenumerate}
+	\item \emph{Forgetting points:} the map $\Phi_f$ commutes
+	with the maps induced by the forgetful maps 
+	$\pi_i : \Conf_M(r) 
+	\longrightarrow \Conf_M(r-1)$ that forget the $i$th point
+	in the domain. 
+	\item \emph{Continuity:} if a configuration $\vec{x_0}$ is
+	close to a configuration $\vec{x_1}$ in $M$, then their
+	images under $\Phi_f$ will be close as configurations
+	in $N$.
+	\end{tenumerate}
+	
+	We would like to relax these two conditions ``up to 
+	homotopy''. But what does this mean?
+	
+	\section{Operads and their modules}
+	
+	One can use operads to achieve this. Let us consider
+	a richer version of configuration spaces, that give us
+	some more wiggle room, by replacing points with disks. 
+	For each $r\in \NN$, define
+	\[ D_m(r) = \Emb_\square(D^m \sqcup \cdots \sqcup D^m , D^m ) \] 
+	the space of rectilinear\footnote{We only allow for dilations and translations} embeddings of $r$ disjoint
+	$m$-disks in another $m$-disk. Similarly, define
+		\[ D_M(r) = \Emb(D^m \sqcup \cdots \sqcup D^m , M ) \] 
+and note that $\Conf_M(r)$ and $D_M(r)$ are homotopy
+equivalent spaces. The upshot is that the symmetric sequence
+$D_m$ forms a (topological) operad. Namely, it comes equipped
+with composition maps
+\[ D_m(k)\times D_m(r_1)\times\cdots D_m(r_k) 
+	\longrightarrow D_m(r_1+\cdots r_k) \] 
+that satisfy certain associativity and equivariance relations.
+More briefly, it forms a monoid in the monoidal category of
+symmetric sequences under the circle product
+\[(X\circ Y)(n) = 
+	\bigsqcup_{k\geqslant 0} X(k)\times_{S_k} 
+		Y[\lambda], \]
+where $Y[\lambda]$ is the $S_k$-module obtained as the
+disjoint union of all permutations of $Y(\lambda_1)\times
+\cdots \times Y(\lambda_k)$ for $\lambda$ a partition of $n$. With
+this at hand, what we want is an equivariant associative map
+\[ D_m\circ D_m \longrightarrow D_m. \]
+ 
+ Moreover, the sequence $D_M$ is a right $D_m$-module, in
+ the sense there is a map $D_M\circ D_m \longrightarrow D_m$
+ that is compatible with the operad structure of $D_m$. 
+ \emph{Note:} since $n\geqslant m$, there is an inclusion
+ of operads $D_m\longrightarrow D_n$, and in particular
+ the right $D_n$-module $D_N$ can be viewed as a right
+ $D_m$-module, which we will do in what follows.
+	
+ We now observe that an embedding $f:M\longrightarrow N$
+ produces for us a map $D_M \longrightarrow D_N$ that is
+ not just a map of symmetric sequences, but in fact a map
+ right $D_m$-modules. In this way, it makes sense to form
+ the mapping space $\Map_{D_m}(D_M,D_N)$
+ and we obtain a map
+ \[ \Emb(M,N) \longrightarrow  \Map_{D_m}(D_M,D_N)\] 
+ by virtue of the additional compatibility properties we
+ observed before. With this at hand, we can state
+ the following theorem:
+ 
+ \begin{theorem*}[Goodwillie--Weiss, Arone--Turchin, Turchin, Boavida--Weiss, Sinha, ...] If $M$ has codimension at least
+ three in $N$, then the map above induces a homotopy
+ equivalence
+ \[ \Emb(M,N) \longrightarrow \mathbb R \Map_{D_m}(D_M,D_N)\]
+ where the right hand side is the \emph{derived}\footnote{For 
+ details, the reader can consult the work of B. Fresse~\cite{}.} 
+ mapping space of $D_m$-module maps $D_M\longrightarrow D_N$.
+ \qed
+  \end{theorem*}
+ 
+ It is useful to note that the derived mapping space describes
+ ``$F_\infty$ term'' in the Goodwillie--Weiss tower for
+ $\Emb(M,N)$, and that one can use truncated versions of
+ mapping spaces to describe the finite stages of the tower.
+ 
+ The upshot of this result is that if we can understand
+ the homotopy type of the configuration spaces as right
+ modules over the little disk operad, then we can understand
+ the homotopy type of the space of embeddings. However,
+ there is a 
+ trade-off: we now need to determine the homotopy type of
+ a very simple manifold into another ---a disjoint union of
+ points--- but nonetheless the functor 
+ $M\longmapsto \Conf_M(r)$ is not
+ easy to compute. In particular, it is not homotopy
+ invariant! For example, the point has empty higher
+ configuration spaces, but the contractible space
+ $D^2$ has $\Conf_{D^2}(2) \simeq S^1$. 
+ 
+ One may suspect that the problem above is that the
+ manifold $D^2$ is not closed (compact), 
+ but Longoni--Salvatore
+ have proved that the lens spaces $L_{7,1}$ and $L_{7,2}$,
+ which are homotopy equivalent, have non-homotopy
+ equivalent configuration spaces. However, these 
+ are non-simply connected spaces, and the following
+ is still an open question:
+ 
+ \begin{question*}
+ Is it true that two simply connected closed manifolds
+ of the same homotopy type have homotopy equivalent
+ configuration spaces?
+ \end{question*}
+ 
+ 
+ \subsection{Bonus: deloopings}
+ 
+ The little disks operads were initially introduced to
+ study and identify when a space can be delooped. That is,
+ given a space $X$, when is it weakly homotopy equivalent
+ to a space of the form
+ \[ \Omega^n(Y) = \Map(D^n;S^{n-1}, Y;\ast) \] 
+ for some other space $Y$? Any loop space $X=\Omega Y$ is an $H$-space and, as such,
+ the monoid $\pi_0(X)$ is in fact group like, in the sense
+ it is a group under the induced product of $X$. Moreover,
+ it is an algebra over the little $n$-disks operad: there
+ are equivariant maps
+ $D_n(k) \times X^k \longrightarrow X$
+ obtained by inserting maps $D^n\longrightarrow Y$
+ into a disk configuration to obtain a new map 
+ $D^n\longrightarrow Y$, which is associative in a precise
+ sense.\footnote{Which one?}
+ 
+ Conversely, one can consider such a $D_n$-algebra $X$
+ which, in particular, comes equipped with a single
+ homotopy class of operations $m: X^2\longrightarrow X$
+ originating from $\pi_0(D_n(2))$, making $\pi_0(X)$
+ into an associative monoid. We say $X$ is a \emph{group-like}
+ $D_n$-algebra if this monoid is in fact a group.
+ 
+ With this at
+ hand, we can state the following result, going back to work
+ of Beck, Boardman-Vogt, May, Segal and Stasheff. The
+ theorem, due to J. P. May, provides a useful theorem to
+ determine when a space can be delooped.
+  
+ \begin{theorem*} A space $X$ is weakly equivalent to
+ an $n$th loop space $\Omega^n(Y)$ if, and only if,
+ it is a group-like $D_n$-algebra.  \qed
+ \end{theorem*}
+ 
+\bibliographystyle{alpha}
+\bibliography{biblio}
+
+
+\Addresses
+
+\end{document}
