@@ -2,8 +2,8 @@
 
 \title{\setstretch{0.9} %will give nice line sep
 	\textbf{Little disks operads and configuration spaces}}
-\author{Notes by Pedro Tamaroff}
-\date{}
+\author{Talk by Najib Idrissi \\ 
+Notes by Pedro Tamaroff}
 
 \begin{document}
 \maketitle
@@ -102,7 +102,7 @@
  Goodwillie--Weiss calculus is the following 
  result:
  
- \begin{theorem*}
+ \begin{theorem}
  Let $F(V) = \Emb(V,N)$ and suppose that $M$ has codimension
  at least three in $N$. There exists a tower
  of functors over $F$ as in~\eqref{eq:tower} such that the
@@ -113,7 +113,7 @@
   the (homotopy type of the?) functors $F_k(M)$ can be 
   computed in some way using configurations of $k$ points
   of $M$ in $N$.}\qed
-   \end{theorem*}
+   \end{theorem}
  
   We will in fact take a slightly different approach,
   and use little disks operads and configuration spaces of
@@ -139,7 +139,7 @@
   of Fadell--Neuwirth and V. I. Arnol'd.  Note that,
   more or less by definition, one has
   that the braid group $B_r$ is equal to 
-  $\pi_1(\Conf_{D^2}(r))$  
+  $\pi_1(\Conf_{D^2}(r))$.
   
  The sequence of spaces $(\Conf_M(r))_{r\geqslant 0}$
  forms a \emph{symmetric sequence} in spaces, that is, 
@@ -218,15 +218,16 @@ this at hand, what we want is an equivariant associative map
  observed before. With this at hand, we can state
  the following theorem:
  
- \begin{theorem*}[Goodwillie--Weiss, Arone--Turchin, Turchin, Boavida--Weiss, Sinha, ...] If $M$ has codimension at least
+ \begin{theorem}[Goodwillie--Weiss, Arone--Turchin, Turchin, Boavida--Weiss, Sinha, ...] If $M$ has codimension at least
  three in $N$, then the map above induces a homotopy
  equivalence
- \[ \Emb(M,N) \longrightarrow \mathbb R \Map_{D_m}(D_M,D_N)\]
+ \[ \label{eq:derivedMap}
+ 	\Emb(M,N) \longrightarrow \mathbb R \Map_{D_m}(D_M,D_N)\]
  where the right hand side is the \emph{derived}\footnote{For 
  details, the reader can consult the work of B. Fresse~\cite{}.} 
  mapping space of $D_m$-module maps $D_M\longrightarrow D_N$.
  \qed
-  \end{theorem*}
+  \end{theorem}
  
  It is useful to note that the derived mapping space describes
  ``$F_\infty$ term'' in the Goodwillie--Weiss tower for
@@ -245,7 +246,10 @@ this at hand, what we want is an equivariant associative map
  easy to compute. In particular, it is not homotopy
  invariant! For example, the point has empty higher
  configuration spaces, but the contractible space
- $D^2$ has $\Conf_{D^2}(2) \simeq S^1$. 
+ $D^2$ has $\Conf_{D^2}(2) \simeq S^1$. More
+ generally, $\Conf_{D^m}(2)$ is homotopy equivalent
+ to $S^{m-1}$, through the map
+ \[ (v,w) \longmapsto \frac{v-w}{|v-w|}.\] 
  
  One may suspect that the problem above is that the
  manifold $D^2$ is not closed (compact), 
@@ -294,11 +298,274 @@ this at hand, what we want is an equivariant associative map
  theorem, due to J. P. May, provides a useful theorem to
  determine when a space can be delooped.
   
- \begin{theorem*} A space $X$ is weakly equivalent to
+ \begin{theorem} A space $X$ is weakly equivalent to
  an $n$th loop space $\Omega^n(Y)$ if, and only if,
  it is a group-like $D_n$-algebra.  \qed
- \end{theorem*}
+ \end{theorem}
  
+ \section{The homotopy type of configuration spaces}
+ 
+ Computing integral homotopy types of spaces and, in particular,
+ of configuration spaces, is remarkably difficult. A useful simplification
+ that still allows us to obtain significant information on the
+ homotopy type of a space is to work rationally. Informally, one
+ can think that we are throwing away the torsion of homotopy groups
+ of a space. 
+ 
+ More precisely, a simply connected topological space $X$ is
+ \emph{rational} if all of the abelian groups $\pi_n(X)$
+ for $n\geqslant 2$ are $\mathbb Q$-vector spaces. A map of
+ spaces $f:X\longrightarrow Y$ is a \emph{rationalization}
+ if $Y$ is a rational space and the induced map $\pi_*(X)\otimes \mathbb Q \longrightarrow \pi_*(Y)$ is an isomorphism. One can show such
+ space $Y$ is unique up to homotopy equivalence relative to $X$,
+ and we write it $X_{\mathbb Q}$.
+ 
+ We say $f$ is a
+ \emph{rational homotopy equivalence} if the following
+ equivalent conditions hold:
+ \begin{tenumerate}
+ \item The map $\pi_*(f)\otimes \mathbb Q$ is an isomorphism.
+ \item The map $H_*(f,\mathbb Q)$ is an isomorphism.
+ \item The map $H^*(f,\mathbb Q)$ is an isomorphism.
+ \end{tenumerate} 
+ We call the weak homotopy type of $X_{\mathbb Q}$ the \emph{rational
+ homotopy type of $X$}. For example, the odd sphere $S^{2n+1}$ have
+ the rational homotopy type of a $K(2n+1,\mathbb Q)$, while
+ the even sphere have a slightly (but still simple) rational
+ homotopy type.  
+ In this sense, doing homotopy theory over
+ $\mathbb Q$ is much simpler, at the cost of losing some
+ information (for example, torsion, Steenrod operations, among
+ others). The following theorem is one of the cornerstones of 
+ rational homotopy theory, along with the seminal work of 
+ D. Quillen~\cite{}:
+ 
+ \newcommand\rightleftarrow{%
+        \mathrel{\vcenter{\mathsurround0pt
+                \ialign{##\crcr
+                        \noalign{\nointerlineskip}$\longrightarrow$\crcr
+                        \noalign{\nointerlineskip}$\longleftarrow$\crcr
+                 }%
+        }}%
+}
+
+ \begin{theorem}[Sullivan] There is a Quillen adjunction\footnote{A special kind of adjunction, see~\cite{} for details.}
+ \[ \Omega^*(-) : \mathsf{Top}^{\geqslant 1} 	
+  \rightleftarrow \mathsf{CDGA}^{\geqslant 1} : \langle -\rangle\] 
+ between the category of simply connected\footnote{There is a corresponding theory for non-simply connected spaces
+ that require nilpotence hypotheses on fundamental groups.
+} topological spaces of
+ finite type up to rational equivalences and
+ simply connected commutative dg algebras of finite type up to
+ quasi-isomorphism. \qed
+ \end{theorem}
+ 
+ The functor $\Omega^*(X)$ is analogous to the de Rham functor of
+ forms, but instead consists of 'piecewise linear polynomial forms'
+ on $X$, while the functor $\langle A\rangle$ is a `geometric realization'
+ functor. The upshot of this theorem is that the determination of the
+ rational homotopy type of a space $X$ is a purely algebraic task,
+ and can be done by producing a cdga model of the (non-commutative)
+ dga of cochains $C^*(X)$. For example, for each $n\geqslant 1$ 
+ the free commutative algebra $(S(x_{2n+1}),0)$ on a single generator 
+ of degree $2n+1$ is a model for the rational homotopy type of the
+ odd sphere $S^{2n+1}$, 
+ while the commutative algebra $(S(x_{2n},y_{4n-1}),d)$ with
+ $dy_{4n-1} = x_{2n}^2$ is a model for the rational homotopy
+ type of the even sphere $S^{2n}$. 
+ 
+ The end goal of rational homotopy theory is reproducing such
+ computation for more complicated spaces or, what is the same,
+ solving the following problem: given a space $X$, determine
+ a cdga $A^*(X)$ that is `nice enough' and quasi-isomorphic
+ to the cdga of PL-forms $\Omega^*(X)$. The model $A^*(X)$
+ will then give us information about the rational homotopy
+ type of $X$. For example, if $A^*(X)$ is minimal, in the sense
+ that $A^*(X) = (S^*(V),d)$ with $dV \subseteq S(V)^{\geqslant 2}$,
+ then $V^* \cong \hom_{\mathbb Q}(\pi_*(X),\mathbb Q)$.
+ 
+ \emph{Back to operads and modules.} With this at hand, our goal is
+ to find a model for $\Omega^*(D_m)$ and $\Omega^*(D_M)$, taking into
+ account that the former is (almost) a cooperad ---the functor 
+ $\Omega^*$ is  contravariant--- and latter is a comodule over it.
+ Since $\Omega^*$ is a good functor, these models will allow us to
+ compute the derived mapping space in~\eqref{eq:derivedMap}, at least
+ rationally, ultimately allowing us to pin down the rational homotopy
+ type of $\Emb(M,N)$. 
+ 
+ \subsection{The case of Euclidean space}
+ 
+ Let us begin with the case $M=\mathbb R^m$, the building block
+ for any other $m$-manifold. In this case, the computation of the
+ cohomology groups of $\Conf_M(r)$ for all $r\geqslant 1$ are well
+ understood and date back to work of V. I. Arnol'd and F. Cohen.
+ For each $r$ and each distinct $i,j\in [r]$, there is a map
+ \[ \Conf_M(r) \longrightarrow \Conf_M(2) \simeq S^{m-1} \]
+ that produces for us a cohomology class of degree $m-1$ that
+ we write $\omega_{ij}$. Note that exchanging $i$ and $j$ 
+ induces the antipodal map on $S^{m-1}$, creating a $(-1)^{m-1}$
+ sign for this cohomology class. Coming from the top cohomology
+ class of the sphere, $\omega_{ij}^2=0$ and, by configurations
+ of three points, one arrives at the following `Jacobi-like
+ identity' for three distinct $i,j,k\in [r]$:
+ \[ \label{eq:Jacobi} 
+ 	\omega_{ij}\omega_{jk}
+ 		 + \omega_{jk}\omega_{ki} 
+ 	 		+ \omega_{ki}\omega_{ij} = 0. \]
+ These is in fact a complete presentation of $H^*(D_m(r),\mathbb Q)$:
+ \begin{theorem}[Arnol'd, Cohen]
+ The cohomology ring $H^*(D_m(r),\mathbb Q)$ is isomorphic to the
+ commutative algebra generated by $\omega_{ij}$ in degree $m-1$
+ for $i,j\in [r]$ subject to the following three sets of relations:
+ \begin{enumerate}[label=$R_{\arabic*}$:]
+  \setlength{\itemsep}{0pt}
+  \setlength{\parskip}{0pt}
+ \item For all distinct $i,j$ we have that $\omega_{ij} = (-1)^{m-1} \omega_{ji}$.
+ \item For all distinct $i,j$ we have that $\omega_{ij}^2 =0$.
+ \item For all distinct $i,j,k$ we have the Jacobi relation~\eqref{eq:Jacobi}.
+ \end{enumerate}
+ \end{theorem}
+ 
+ In fact, Cohen computed the cooperadic decomposition maps of
+ $H^*(D_m(r),\mathbb Q)$, thus determining it completely as a
+ Hopf cooperad. 
+ In general, this computation would not be enough to determine
+ the rational homotopy type of $D_m$. However, the following
+ formality result says that indeed this cohomology ring is
+ quasi-isomorphic to the algebra of forms $\Omega^*(D_m)$,
+ and thus does capture the rational homotopy type of $D_m$:
+ 
+ \begin{theorem}[Kontsevich, Lambrechts--Voli\'c, Tamarkin,...]
+ The operad $D_m$ is formal: there are quasi-isomorphisms
+ of Hopf cooperads
+ \[ \label{eq:formality}
+ 	 H^*(D_m) \longleftarrow \cdot 
+ 	 	\longrightarrow \Omega^*(D_m). \] 
+ \end{theorem}
+ 
+ At the time, results on various flavour of formality of the operad
+ $D_m$ abound, see~\cite{Fresse, Petersen, Tamarkin, Horel}. One of 
+ the two most famous consequences of formality of $D_2$ are the 
+ solution of the Deligne conjecture (for example, as was done by
+ Tamarkin in~\cite{Tamarkin2003}) and the deformation quantization
+ theorem of Kontsevich. For us, formality has the consequence of 
+ allowing us to restrict to cohomology when computing our derived
+ mapping space of interest. 
+ 
+ \subsection{Two approaches to formality}
+ 
+ \textsc{Kontsevich's approach} 
+ to obtaining the formality result in the last
+ theorem can be summarized as follows. First, one can find `arity
+ wise' resolutions of the commutative algebras $H^*(D_m(r))$, which
+ involve, for example, introducing a new generator $\xi_{ijk}$ 
+ relaxing the Jacobi identity of~\eqref{eq:Jacobi} up to homotopy:
+ \[ d\xi_{ijk} = \omega_{ij}\omega_{jk}
+ 		 + \omega_{jk}\omega_{ki} 
+ 	 		+ \omega_{ki}\omega_{ij}. \] 
+ If we interpret $\omega_{ij}\omega_{jk}$ as the directed  graph
+ (and interpret the other two terms similarly)
+ 
+ \tikzset{>=latex}
+\[
+ \begin{tikzpicture}[line cap=round,line join=round,x=1.0cm,y=1.0cm, scale = .75]
+\clip(-1.75,-1.75) rectangle (1.75,1.75);
+\draw [line width=1.pt,dash pattern=on 3pt off 3pt] (0.,0.) circle (1.6 cm);
+\draw [->,>=stealth,line width=1.pt] (-0.95,0) -- (0.5,0.79);
+\draw [->,>=stealth,line width=1.pt] (0.5,-0.77) -- (0.55,0.77);
+\draw (-0.95,0.0) node[anchor=east] {$i$};
+\draw (0.7,1) node {$j$};
+\draw (0.5,-0.77) node[anchor=north ] {$k$};
+\end{tikzpicture}
+	\]
+
+then we may interpret $\xi_{ijk}$ as the directed
+graph 
+
+\[
+ \begin{tikzpicture}[line cap=round,line join=round,x=1.0cm,y=1.0cm, scale = .75]
+\clip(-1.75,-1.75) rectangle (1.75,1.75);
+\draw [line width=1.pt,dash pattern=on 3pt off 3pt] (0.,0.) circle (1.6 cm);
+\draw [->,>=stealth,line width=1.pt] (-0.95,0) -- (0,0);
+\draw [->,>=stealth,line width=1.pt] (0.5,0.79) -- (0,0);
+\draw [->,>=stealth,line width=1.pt] (0.5,-0.77) -- (0,0);
+\draw (-0.95,0.0) node[anchor=east] {$i$};
+\draw (0.7,1) node {$j$};
+\draw (0.65,-0.77) node[anchor=north ] {$k$};
+\end{tikzpicture}
+	\]
+
+with differential the Jacobi relation, obtained by
+contracting one edge at a time. This idea gives rise
+to an object called a graph complex, filling in the
+`dot' in~\eqref{eq:formality}. The map pointing to the
+left is obtained by assigning an integral 
+to each labeled graph with some internal (black) vertices,
+and giving rise to an element in $\Omega^*(D_m)$.
+For details, the reader can refer to the book of
+Lambrechts and Voli\'c~\cite{book}.
+
+It is worth pointing out that one can show the
+framed little disks operad $D_2^{\mathrm{fr}}$
+is formal, this was done by Giansiracusa--Salvatore.
+Later, S. Moriya and Turchin--Willwacher showed that
+the framed little disks operad $D_{2m+1}^{\mathrm{fr}}$ is
+not formal for $m\geqslant 2$.
+
+\textsc{Tamarkin's approach}, on the other hand, can be
+summarized as follows. There is an operad in groupoids called the
+\emph{parenthesized braids operad}, which we write
+$\mathsf{PaB}$\footnote{Following Tamarkin's original notation.}. 
+The elements of $\mathsf{PaB}$ are
+parenthesized permutations $(\sigma,\pi)$
+of some finite set $[r]$, and the morphisms between
+$(\sigma,\pi)$ and $(\sigma',\pi')$ consist of the
+elements of $B_r$ that join an element in $\sigma$
+with the same element in $\sigma'$, as in the figure
+below. Tamarkin's observation is that the geometrical
+realization of this operad in groupoids is \emph{a} little disks
+operad ---what is now called an $E_2$-operad--- and that
+to show $D_2$ is formal, it suffices to show his
+operad of parenthesized braids is formal: any two pair
+of $E_2$-operads are connected by a zig-zag of quasi-isomorphisms,
+so this suffices.
+ 	 
+\emph{Detour:} It is well known that each topological
+space $D_2(r)$ is a $K(PB_r,1)$ where $PB_r$ is the pure braid 
+group on $r$ strands. For Tamarkin, a topological $B_\infty$-operad
+is a topological operad $X$ where each $X(r)$ is a contractible
+space carrying a free action of the braid group $B_r$. The
+corresponding little disks operad is $E_2(X) = X/PB$, the
+arity-wise quotient of $X(r)$ by $PB_r$. Naturally, $D_2$
+is the associated $E_2$-operad of its classifying space.
+ 
+To show that $\mathsf{PaB}$ is formal, Tamarkin shows that
+every Drinfel'd associator produces a map of operad from
+$C_*(\mathsf{PaB})$ to the Chevalley--Eilenberg complex 
+$\mathscr{C}_*(\mathfrak{t})$ of the Drinfel'd--Kohno
+Lie algebras
+\[ \mathfrak{t} = ( \mathfrak{t}_1,\mathfrak{t}_2,\mathfrak{t}_3,\ldots)\]
+which form an operad in Lie algebras.
+Since these are the Koszul dual Lie algebras to the
+commutative model of Arnol'd and Cohen, this
+produces for the requisite quasi-isomorphisms,
+and thus shows that every $E_2$-operad is formal.
+Thus, Tamarkin's result can be stated as follows:
+
+\begin{theorem}
+The $E_2$-operad of parenthesized braids $\mathsf{PaB}$ is
+formal, and each Drinfel'd associator $\Phi$ produces a quasi-isomorphism
+of Hopf operads 
+\[ f_\Phi: C_*(\mathsf{PaB}) 
+	\longrightarrow \mathscr{C}_*(\mathfrak{t})\]
+where the right hand side is the Chevalley--Eilenberg 
+construction of the Drinfel'd--Kohno Lie algebras,
+which receives a quasi-isomorphism
+\[ H_*(D_2) \longrightarrow \mathscr{C}_*(\mathfrak{t}).\] 
+\end{theorem}
+
+
+
 \bibliographystyle{alpha}
 \bibliography{biblio}
 
