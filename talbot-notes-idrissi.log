@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=pdflatex 2021.5.31)  30 JUN 2021 14:48
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=pdflatex 2021.5.31)  30 JUN 2021 17:47
 entering extended mode
 **./talbot-notes-idrissi.tex
 (talbot-notes-idrissi.tex
@@ -1323,30 +1323,30 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.04503pt}.
 
 [2]
-LaTeX Font Info:    Calculating math sizes for size <9.16678> on input line 184
+LaTeX Font Info:    Calculating math sizes for size <9.16678> on input line 185
 .
 
 
 LaTeX Font Warning: Font shape `U/bbold/m/n' in size <5.50012> not available
-(Font)              size <6> substituted on input line 184.
+(Font)              size <6> substituted on input line 185.
 
 
 LaTeX Font Warning: Font shape `U/stmry/m/n' in size <5.50012> not available
-(Font)              size <6> substituted on input line 184.
+(Font)              size <6> substituted on input line 185.
 
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9.16678> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 184.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 185.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6.78346> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 184.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 185.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5.50012> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 184.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 185.
 
 LaTeX Font Warning: Font shape `OMS/oasy/m/n' in size <5.50012> not available
-(Font)              size <6> substituted on input line 184.
+(Font)              size <6> substituted on input line 185.
 
 
 LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <5.50012> not available
-(Font)              size <6> substituted on input line 184.
+(Font)              size <6> substituted on input line 185.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1367,7 +1367,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [4]
 Package hyperref Info: bookmark level for unknown question* defaults to 0 on in
-put line 267.
+put line 268.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1380,10 +1380,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [5]
 
 LaTeX Font Warning: Font shape `OT1/cmss/m/n' in size <5.50012> not available
-(Font)              size <6> substituted on input line 360.
+(Font)              size <6> substituted on input line 361.
 
 
-Overfull \hbox (13.04616pt too wide) in paragraph at lines 390--398
+Overfull \hbox (13.04616pt too wide) in paragraph at lines 391--399
 \OT1/ztmcm/m/n/11 
 [](\OML/ztmcm/m/it/11 D[]\OT1/ztmcm/m/n/11 )$\T1/ptm/m/n/11 , tak-ing into ac-c
 ount that the former is (al-most) a co-operad ---the func-tor $\OT1/ztmcm/m/n/1
@@ -1403,7 +1403,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 Package amsrefs Warning: Use of \cites is recommended instead of \cite 
 (amsrefs)                for multiple cites 'Fresse2018, Petersen2013, Tamarkin
-2003, BoavidadeBrito2021' on input line 450.
+2003, BoavidadeBrito2021' on input line 454.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1414,12 +1414,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.04503pt}.
 
 [7]
-<braids.png, id=184, 542.025pt x 304.88907pt>
-File: braids.png Graphic file (type png)
-<use braids.png>
-Package pdftex.def Info: braids.png  used on input line 538.
-(pdftex.def)             Requested size: 81.30023pt x 45.73138pt.
-
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 12.04503pt, for example:
@@ -1429,6 +1423,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.04503pt}.
 
 [8]
+<braids.png, id=197, 542.025pt x 304.88907pt>
+File: braids.png Graphic file (type png)
+<use braids.png>
+Package pdftex.def Info: braids.png  used on input line 543.
+(pdftex.def)             Requested size: 81.30023pt x 45.73138pt.
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 12.04503pt, for example:
@@ -1637,11 +1637,11 @@ Package rerunfilecheck Info: File `talbot-notes-idrissi.out' has not changed.
 ### semi simple group (level 1) entered at line 115 (\begingroup)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 30430 strings out of 479076
- 552439 string characters out of 2860427
+ 30434 strings out of 479076
+ 552470 string characters out of 2860427
  897836 words of memory out of 3000000
  47330 multiletter control sequences out of 15000+600000
- 523735 words of font info for 236 fonts, out of 8000000 for 9000
+ 524365 words of font info for 238 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  115i,15n,122p,865b,9919s stack positions out of 5000i,500n,10000p,200000b,80000s
 pdfTeX warning (dest): name{cite.} has been referenced but does
@@ -1664,9 +1664,9 @@ iles/MiKTeX 2.9/fonts/type1/urw/symbol/usyr.pfb><C:/Program Files/MiKTeX 2.9/fo
 nts/type1/urw/symbol/usyr.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/time
 s/utmb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/
 Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on talbot-notes-idrissi.pdf (11 pages, 221197 bytes).
+Output written on talbot-notes-idrissi.pdf (11 pages, 222351 bytes).
 PDF statistics:
- 355 PDF objects out of 1000 (max. 8388607)
- 106 named destinations out of 1000 (max. 500000)
+ 360 PDF objects out of 1000 (max. 8388607)
+ 108 named destinations out of 1000 (max. 500000)
  82 words of extra memory for PDF output out of 10000 (max. 10000000)
 

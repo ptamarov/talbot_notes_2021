@@ -48,7 +48,7 @@ Notes by Pedro Tamaroff}
  Nonetheless, higher homotopy and homology groups
  of $\Emb(M,N)$ are non-trivial, and give interesting
  and fine invariants of $M$ and $N$ that depend on 
- their smooth structure of them, and not only on
+ their smooth structure, and not only on
  their homotopy type. 
  
  The immediate problem one encounters when trying
@@ -98,7 +98,7 @@ Notes by Pedro Tamaroff}
  order at most $k$'' for some $k\in \NN$ requires
  a bit more care, an involves the combinatorics of
  cubical posets. We point the reader to~\cite{}
- for details. Informally, the cornerstone of the
+ for details. The cornerstone of the
  Goodwillie--Weiss calculus is the following 
  result:
  
@@ -138,7 +138,8 @@ Notes by Pedro Tamaroff}
   braid groups by 
   \textcolor{trinityblue}{[I did not get the name]}, 
   and later in the work
-  of Fadell--Neuwirth~\cite{Fadell1962} and V. I. Arnol'd~\cite{Arnold1969}.
+  of V. I. Arnol'd~\cite{Arnold1969} and 
+  Fadell--Neuwirth~\cite{Fadell1962}.
   Note that,
   more or less by definition, one has
   that the braid group $B_r$ is equal to 
@@ -176,14 +177,14 @@ enjoy some additional compatibility properties:
 	
 	\section{Operads and their modules}
 	
-	One can use operads to achieve this. Let us consider
+	One can use operads to formalize this. Let us consider
 	a richer version of configuration spaces, that give us
 	some more wiggle room, by replacing points with disks. 
 	For each $r\in \NN$, define
 	\[ D_m(r) = \Emb_\square(D^m \sqcup \cdots \sqcup D^m , D^m ) \] 
-	the space of rectilinear\footnote{We only allow for dilations and translations} embeddings of $r$ disjoint
+	the space of rectilinear\footnote{We only allow for dilations and translations.} embeddings of $r$ disjoint
 	$m$-disks in another $m$-disk. Similarly, define
-		\[ D_M(r) = \Emb(D^m \sqcup \cdots \sqcup D^m , M ) \] 
+		\[ D_M(r) = \Emb_\square(D^m \sqcup \cdots \sqcup D^m , M ) \] 
 and note that $\Conf_M(r)$ and $D_M(r)$ are homotopy
 equivalent spaces. The upshot is that the symmetric sequence
 $D_m$ forms a (topological) operad. Namely, it comes equipped
@@ -205,7 +206,7 @@ this at hand, what we want is an equivariant associative map
  Moreover, the sequence $D_M$ is a right $D_m$-module, in
  the sense there is a map $D_M\circ D_m \longrightarrow D_m$
  that is compatible with the operad structure of $D_m$. 
- \emph{Note:} since $n\geqslant m$, there is an inclusion
+ Since $n\geqslant m$, there is an inclusion
  of operads $D_m\longrightarrow D_n$, and in particular
  the right $D_n$-module $D_N$ can be viewed as a right
  $D_m$-module, which we will do in what follows.
@@ -232,7 +233,7 @@ this at hand, what we want is an equivariant associative map
  \qed
   \end{theorem}
  
- It is useful to note that the derived mapping space describes
+ It is useful to note that the derived mapping space describes the
  ``$F_\infty$ term'' in the Goodwillie--Weiss tower for
  $\Emb(M,N)$, and that one can use truncated versions of
  mapping spaces to describe the finite stages of the tower.
@@ -364,7 +365,7 @@ this at hand, what we want is an equivariant associative map
  \end{theorem}
  
  The functor $\Omega^*(X)$ is analogous to the de Rham functor of
- forms, but instead consists of 'piecewise linear polynomial forms'
+ forms, but instead consists of `piece-wise linear polynomial forms'
  on $X$, while the functor $\langle A\rangle$ is a `geometric realization'
  functor. The upshot of this theorem is that the determination of the
  rational homotopy type of a space $X$ is a purely algebraic task,
@@ -406,9 +407,10 @@ this at hand, what we want is an equivariant associative map
  \[ \Conf_M(r) \longrightarrow \Conf_M(2) \simeq S^{m-1} \]
  that produces for us a cohomology class of degree $m-1$ that
  we write $\omega_{ij}$. Note that exchanging $i$ and $j$ 
- induces the antipodal map on $S^{m-1}$, creating a $(-1)^{m-1}$
+ induces the antipodal map on $S^{m-1}$, creating a $(-1)^m$
  sign for this cohomology class. Coming from the top cohomology
- class of the sphere, $\omega_{ij}^2=0$ and, by configurations
+ class of the sphere, $\omega_{ij}^2=0$ and, by looking at
+ configurations
  of three points, one arrives at the following `Jacobi-like
  identity' for three distinct $i,j,k\in [r]$:
  \[ \label{eq:Jacobi} 
@@ -423,7 +425,7 @@ this at hand, what we want is an equivariant associative map
  \begin{enumerate}[label=$R_{\arabic*}$:]
   \setlength{\itemsep}{0pt}
   \setlength{\parskip}{0pt}
- \item For all distinct $i,j$ we have that $\omega_{ij} = (-1)^{m-1} \omega_{ji}$.
+ \item For all distinct $i,j$ we have that $\omega_{ij} = (-1)^m \omega_{ji}$.
  \item For all distinct $i,j$ we have that $\omega_{ij}^2 =0$.
  \item For all distinct $i,j,k$ we have the Jacobi relation~\eqref{eq:Jacobi}.
  \end{enumerate}
@@ -431,7 +433,9 @@ this at hand, what we want is an equivariant associative map
  
  In fact, Cohen computed the cooperadic decomposition maps of
  $H^*(D_m(r),\mathbb Q)$, thus determining it completely as a
- Hopf cooperad. 
+ Hopf cooperad: the operad $H_*(D_m,\mathbb Q)$ is isomorphic
+ to the operad of Poisson algebras with a commutative product
+ of degree zero and a Lie bracket of degree $m-1$\footnote{Integrally, the description of the algebras governed by the homology of configuration spaces is much more complicated.}.
  In general, this computation would not be enough to determine
  the rational homotopy type of $D_m$. However, the following
  formality result says that indeed this cohomology ring is
@@ -450,8 +454,9 @@ this at hand, what we want is an equivariant associative map
  $D_m$ abound, see~\cite{Fresse2018, Petersen2013, Tamarkin2003, BoavidadeBrito2021}. One of 
  the two most famous consequences of formality of $D_2$ are the 
  solution of the Deligne conjecture (for example, as was done by
- Tamarkin as explained in~\cite{Hinich2003}) and the deformation quantization
- theorem of Kontsevich. For us, formality has the consequence of 
+ Tamarkin and explained in~\cite{Hinich2003}) and the deformation quantization
+ theorem of Kontsevich~\cite{}. 
+ For us, formality has the consequence of 
  allowing us to restrict to cohomology when computing our derived
  mapping space of interest. 
  
@@ -541,17 +546,17 @@ so this suffices.
  	 \label{fig:braids}
  	 \end{figure}
  	 
-\emph{Detour:} It is well known that each topological
+It is well known that each topological
 space $D_2(r)$ is a $K(PB_r,1)$ where $PB_r$ is the pure braid 
 group on $r$ strands. For Tamarkin, a topological $B_\infty$-operad
 is a topological operad $X$ where each $X(r)$ is a contractible
 space carrying a free action of the braid group $B_r$. The
 corresponding little disks operad is $E_2(X) = X/PB$, the
-arity-wise quotient of $X(r)$ by $PB_r$. Naturally, $D_2$
+arity-wise quotient of $X(r)$ by $PB_r$\footnote{Note that $B_r/PB_r = S_r$, so we get a symmetric operad.}. Naturally, $D_2$
 is the associated $E_2$-operad of its classifying space.
  
 To show that $\mathsf{PaB}$ is formal, Tamarkin shows that
-every Drinfel'd associator produces a map of operad from
+every Drinfel'd associator produces a map of Hopf operads from
 $C_*(\mathsf{PaB})$ to the Chevalley--Eilenberg complex 
 $\mathscr{C}_*(\mathfrak{t})$ of the Drinfel'd--Kohno
 Lie algebras~\cite{}
