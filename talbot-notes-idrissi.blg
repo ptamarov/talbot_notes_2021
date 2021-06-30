@@ -1,0 +1,54 @@
+This is BibTeX, Version 0.99d
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: talbot-notes-idrissi.aux
+Reallocating 'name_of_file' (item size: 1) to 6 items.
+The style file: amsrn.bst
+Reallocating 'name_of_file' (item size: 1) to 7 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Database file #1: biblio.bib
+Warning--I didn't find a database entry for "Calculus"
+Warning--I didn't find a database entry for ""
+You've used 9 entries,
+            1497 wiz_defined-function locations,
+            485 strings with 4098 characters,
+and the built_in function-call counts, 6577 in all, are:
+= -- 205
+> -- 565
+< -- 3
++ -- 60
+- -- 532
+* -- 623
+:= -- 1273
+add.period$ -- 0
+call.type$ -- 9
+change.case$ -- 42
+chr.to.int$ -- 9
+cite$ -- 9
+duplicate$ -- 473
+empty$ -- 245
+format.name$ -- 30
+if$ -- 690
+int.to.chr$ -- 0
+int.to.str$ -- 0
+missing$ -- 225
+newline$ -- 98
+num.names$ -- 18
+pop$ -- 464
+preamble$ -- 1
+purify$ -- 33
+quote$ -- 0
+skip$ -- 108
+stack$ -- 0
+substring$ -- 82
+swap$ -- 331
+text.length$ -- 65
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 76
+warning$ -- 0
+while$ -- 90
+width$ -- 0
+write$ -- 218
+(There were 2 warnings)

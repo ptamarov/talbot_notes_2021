@@ -6,4 +6,5 @@
 \contentsline {section}{\numberline {4}The homotopy type of configuration spaces}{5}{section.4}%
 \contentsline {subsection}{\numberline {4.1}The case of Euclidean space}{7}{subsection.4.1}%
 \contentsline {subsection}{\numberline {4.2}Two approaches to formality}{8}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Configuration spaces of closed manifolds}{10}{subsection.4.3}%
 \contentsfinish 

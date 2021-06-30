@@ -1,0 +1,100 @@
+% \bib, bibdiv, biblist are defined by the amsrefs package.
+\begin{bibdiv}
+\begin{biblist}
+
+\bib{Arnold1969}{article}{
+      author={Arnold, V.},
+       title={The cohomology ring of the group of dyed braids},
+        date={1969},
+      volume={5},
+       pages={227\ndash 231},
+}
+
+\bib{BoavidadeBrito2021}{article}{
+      author={de~Brito, Pedro~Boavida},
+      author={Horel, Geoffroy},
+       title={On the formality of the little disks operad in positive
+  characteristic},
+        date={2021-02},
+     journal={Journal of the London Mathematical Society},
+         url={https://doi.org/10.1112/jlms.12442},
+}
+
+\bib{Fadell1962}{article}{
+      author={Fadell, Edward},
+      author={Neuwirth, Lee},
+       title={Configuration spaces.},
+        date={1962-06},
+     journal={{MATHEMATICA} {SCANDINAVICA}},
+      volume={10},
+       pages={111},
+         url={https://doi.org/10.7146/math.scand.a-10517},
+}
+
+\bib{RHT}{book}{
+      author={F\'{e}lix, Yves},
+      author={Halperin, Stephen},
+      author={Thomas, Jean-Claude},
+       title={Rational homotopy theory},
+      series={Graduate Texts in Mathematics},
+   publisher={Springer-Verlag, New York},
+        date={2001},
+      volume={205},
+        ISBN={0-387-95068-0},
+         url={https://doi.org/10.1007/978-1-4613-0105-9},
+      review={\MR{1802847}},
+}
+
+\bib{Fresse2018}{misc}{
+      author={Fresse, Benoit},
+      author={Willwacher, Thomas},
+       title={The intrinsic formality of $e_n$-operads},
+        date={2018},
+}
+
+\bib{Hinich2003}{article}{
+      author={Hinich, V.},
+       title={Tamarkin's proof of {K}ontsevich formality theorem},
+        date={2003},
+        ISSN={0933-7741},
+     journal={Forum Math.},
+      volume={15},
+      number={4},
+       pages={591\ndash 614},
+         url={https://doi.org/10.1515/form.2003.032},
+      review={\MR{1978336}},
+}
+
+\bib{LambrechtsVolic2014}{book}{
+      author={Lambrechts, Pascal},
+      author={Voli\'c, Ismar},
+       title={Formality of the little {$N$}-disks operad},
+      series={Memoirs of the American Mathematical Society},
+   publisher={American Mathematical Society, Providence, RI},
+        date={2014},
+      volume={230},
+      number={1079},
+        ISBN={978-0-8218-9212-1/978-1-4704-1669-0},
+        note={The algebraic theory and its topological background},
+}
+
+\bib{Petersen2013}{misc}{
+      author={Petersen, Dan},
+       title={Minimal models, gt-action and formality of the little disk
+  operad},
+        date={2013},
+}
+
+\bib{Tamarkin2003}{article}{
+      author={Tamarkin, Dmitry~E.},
+       title={Formality of chain operad of little discs},
+        date={2003},
+        ISSN={0377-9017},
+      volume={66},
+      number={1-2},
+       pages={65\ndash 72},
+      review={\MR{2064592}},
+}
+
+\end{biblist}
+\end{bibdiv}
