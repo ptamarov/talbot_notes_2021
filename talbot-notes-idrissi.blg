@@ -8,47 +8,44 @@ Reallocating 'singl_function' (item size: 4) to 100 items.
 Reallocating 'singl_function' (item size: 4) to 100 items.
 Reallocating 'singl_function' (item size: 4) to 100 items.
 Database file #1: biblio.bib
-Warning--I didn't find a database entry for "Calculus"
-Warning--I didn't find a database entry for ""
-You've used 9 entries,
+You've used 27 entries,
             1497 wiz_defined-function locations,
-            485 strings with 4098 characters,
-and the built_in function-call counts, 6577 in all, are:
-= -- 205
-> -- 565
-< -- 3
-+ -- 60
-- -- 532
-* -- 623
-:= -- 1273
+            617 strings with 6829 characters,
+and the built_in function-call counts, 19305 in all, are:
+= -- 591
+> -- 1632
+< -- 10
++ -- 163
+- -- 1539
+* -- 1804
+:= -- 3691
 add.period$ -- 0
-call.type$ -- 9
-change.case$ -- 42
-chr.to.int$ -- 9
-cite$ -- 9
-duplicate$ -- 473
-empty$ -- 245
-format.name$ -- 30
-if$ -- 690
+call.type$ -- 27
+change.case$ -- 120
+chr.to.int$ -- 30
+cite$ -- 27
+duplicate$ -- 1425
+empty$ -- 742
+format.name$ -- 78
+if$ -- 2057
 int.to.chr$ -- 0
 int.to.str$ -- 0
-missing$ -- 225
-newline$ -- 98
-num.names$ -- 18
-pop$ -- 464
+missing$ -- 683
+newline$ -- 276
+num.names$ -- 54
+pop$ -- 1390
 preamble$ -- 1
-purify$ -- 33
+purify$ -- 93
 quote$ -- 0
-skip$ -- 108
+skip$ -- 330
 stack$ -- 0
-substring$ -- 82
-swap$ -- 331
-text.length$ -- 65
+substring$ -- 241
+swap$ -- 992
+text.length$ -- 189
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 76
+type$ -- 230
 warning$ -- 0
-while$ -- 90
+while$ -- 264
 width$ -- 0
-write$ -- 218
-(There were 2 warnings)
+write$ -- 626

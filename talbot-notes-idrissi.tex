@@ -97,7 +97,7 @@ Notes by Pedro Tamaroff}
  To define what it means for a functor to be ``of
  order at most $k$'' for some $k\in \NN$ requires
  a bit more care, an involves the combinatorics of
- cubical posets. We point the reader to~\cite{}
+ cubical posets. We point the reader to~\cite{Munson2010}
  for details. The cornerstone of the
  Goodwillie--Weiss calculus is the following 
  result:
@@ -109,10 +109,11 @@ Notes by Pedro Tamaroff}
  map
  \[ F(M) \longrightarrow \operatorname{holim}_k F_k(M)\]
   restricts to a homotopy equivalence of the base
-  point components. \textcolor{trinityblue}{Moreover,
-  the (homotopy type of the?) functors $F_k(M)$ can be 
-  computed in some way using configurations of $k$ points
-  of $M$ in $N$. I am not sure how to say this precisely!}\qed
+  point components. Moreover, for each $k\in \NN$
+  the homotopy type of the space $F_k(M)$ can be 
+  computed using a truncated mapping space where
+  we only allow configurations of at most $k$
+  points. \qed
    \end{theorem}
  
   We will in fact take a slightly different approach,
@@ -127,7 +128,7 @@ Notes by Pedro Tamaroff}
 %  Span of maybe two decades. 
   
   We now aim to approximate $\Emb(M,N)$ using
-  \emph{configurations spaces}. For each $r\in \NN$,
+  \emph{configurations spaces}~\cite{knudsen2018configuration}. For each $r\in \NN$,
   we define the \emph{ordered configuration space of
   $r$ points in $M$} by
   \[ \Conf_M(r) = 
@@ -135,8 +136,7 @@ Notes by Pedro Tamaroff}
   	: \text{ $x_i\neq x_j$ for all $i\neq j$} \}. 
   \]
   They appeared initially in the study of braids and
-  braid groups by 
-  \textcolor{trinityblue}{[I did not get the name]}, 
+  braid groups by  Hurwitz~\cite{Hurwitz1891}, 
   and later in the work
   of V. I. Arnol'd~\cite{Arnold1969} and 
   Fadell--Neuwirth~\cite{Fadell1962}.
@@ -209,15 +209,23 @@ this at hand, what we want is an equivariant associative map
  Since $n\geqslant m$, there is an inclusion
  of operads $D_m\longrightarrow D_n$, and in particular
  the right $D_n$-module $D_N$ can be viewed as a right
- $D_m$-module, which we will do in what follows.
-	
+ $D_m$-module, which we will do in what follows. For
+ unframed manifolds ---those with possibly non-trivial 
+ tangent bundle--- one needs to look instead at \emph{framed}
+ configurations, where each point (or little disk) is
+ decorated with a frame, and we will use the superscript
+ $\mathrm{fr}$ to denote this. 
+ 
  We now observe that an embedding $f:M\longrightarrow N$
- produces for us a map $D_M \longrightarrow D_N$ that is
+ produces for us a map $D_M^\mathrm{fr} 
+ \longrightarrow D_N^\mathrm{fr}$ that is
  not just a map of symmetric sequences, but in fact a map
- right $D_m$-modules. In this way, it makes sense to form
- the mapping space $\Map_{D_m}(D_M,D_N)$
+ right $D_m^\mathrm{fr}$-modules. 
+ In this way, it makes sense to form
+ the mapping space 
+ $\Map_{D_m^\mathrm{fr}}(D_M^\mathrm{fr},D_N^\mathrm{fr})$
  and we obtain a map
- \[ \Emb(M,N) \longrightarrow  \Map_{D_m}(D_M,D_N)\] 
+ \[ \Emb(M,N) \longrightarrow  \Map_{D_m^{\mathrm{fr}}}(D_M^\mathrm{fr},D_N^\mathrm{fr})\] 
  by virtue of the additional compatibility properties we
  observed before. With this at hand, we can state
  the following theorem:
@@ -228,8 +236,8 @@ this at hand, what we want is an equivariant associative map
  \[ \label{eq:derivedMap}
  	\Emb(M,N) \longrightarrow \mathbb R \Map_{D_m}(D_M,D_N)\]
  where the right hand side is the \emph{derived}\footnote{For 
- details, the reader can consult the work of B. Fresse~\cite{}.} 
- mapping space of $D_m$-module maps $D_M\longrightarrow D_N$.
+ details, the reader can consult the work of B. Fresse~\cite{Fresse2009,FresseBook1,FresseBook2}.} 
+ mapping space of $D_m^\mathrm{fr}$-module maps $D_M^\mathrm{fr}\longrightarrow D_N^\mathrm{fr}$.
  \qed
   \end{theorem}
  
@@ -257,7 +265,7 @@ this at hand, what we want is an equivariant associative map
  
  One may suspect that the problem above is that the
  manifold $D^2$ is not closed (compact), 
- but Longoni--Salvatore~\cite{}
+ but Longoni--Salvatore~\cite{Longoni2005}
  have proved that the lens spaces $L_{7,1}$ and $L_{7,2}$,
  which are homotopy equivalent, have non-homotopy
  equivalent configuration spaces. However, these 
@@ -298,9 +306,12 @@ this at hand, what we want is an equivariant associative map
  
  With this at
  hand, we can state the following result, going back to work
- of Beck, Boardman-Vogt, May, Segal and Stasheff. The
- theorem, due to J. P. May~\cite{}, provides a useful theorem to
- determine when a space can be delooped.
+ of Beck, Boardman-Vogt, May, Segal and Stasheff;
+ see~\cite{Boardman1973,Stasheff1963,May1972}. The
+ following 
+ theorem, due to J. P. May, provides a useful 
+ recognition principle to determine when a 
+ space can be delooped.
   
  \begin{theorem} A space $X$ is weakly equivalent to
  an $n$th loop space $\Omega^n(Y)$ if, and only if,
@@ -342,7 +353,7 @@ this at hand, what we want is an equivariant associative map
  information (for example, torsion, Steenrod operations, among
  others). The following theorem is one of the cornerstones of 
  rational homotopy theory, along with the seminal work of 
- D. Quillen~\cite{}:
+ D. Quillen~\cite{Quillen1969}:
  
  \newcommand\rightleftarrow{%
         \mathrel{\vcenter{\mathsurround0pt
@@ -455,7 +466,7 @@ this at hand, what we want is an equivariant associative map
  the two most famous consequences of formality of $D_2$ are the 
  solution of the Deligne conjecture (for example, as was done by
  Tamarkin and explained in~\cite{Hinich2003}) and the deformation quantization
- theorem of Kontsevich~\cite{}. 
+ theorem of Kontsevich~\cite{Kontsevich2003}. 
  For us, formality has the consequence of 
  allowing us to restrict to cohomology when computing our derived
  mapping space of interest. 
@@ -515,8 +526,8 @@ Lambrechts and Voli\'c~\cite{LambrechtsVolic2014}.
 
 It is worth pointing out that one can show the
 framed little disks operad $D_2^{\mathrm{fr}}$
-is formal, this was done by Giansiracusa--Salvatore~\cite{}.
-Later, S. Moriya~\cite{} and Turchin--Willwacher~\cite{} showed that
+is formal, this was done by Giansiracusa--Salvatore~\cite{giansiracusa2010formality}.
+Later, S. Moriya~\cite{Moriya2017} and Khoroshkin--Willwacher~\cite{khoroshkin2017real} showed that
 the framed little disks operad $D_{2m+1}^{\mathrm{fr}}$ is
 not formal for $m\geqslant 2$.
 
@@ -559,7 +570,7 @@ To show that $\mathsf{PaB}$ is formal, Tamarkin shows that
 every Drinfel'd associator produces a map of Hopf operads from
 $C_*(\mathsf{PaB})$ to the Chevalley--Eilenberg complex 
 $\mathscr{C}_*(\mathfrak{t})$ of the Drinfel'd--Kohno
-Lie algebras~\cite{}
+Lie algebras~\cite{Kohno1985,FresseBook1}
 \[ \mathfrak{t} = ( \mathfrak{t}_1,\mathfrak{t}_2,\mathfrak{t}_3,\ldots)\]
 which form an operad in Lie algebras.
 Since these are the Koszul dual Lie algebras to the
@@ -598,7 +609,7 @@ in its boundary is marked. The operad  $D_2^{\mathrm{fr}}$ is
  cyclic operad. Inspired by \u{S}evera's proof, we have
  the following result:
  
- \begin{theorem}[Campos--Idrissi--Willwacher~\cite{}] The
+ \begin{theorem}[Campos--Idrissi--Willwacher] The
  cyclic operad $D_2^{\mathrm{fr}}$  is formal. \qed
 \end{theorem}  
 
@@ -634,7 +645,7 @@ with the two additional sets of relations:
  $A(r)$ does provide us with such a model. This conjecture
  was confirmed over the reals:
  
- \begin{theorem}[Idrissi~\cite{}]
+ \begin{theorem}[Idrissi~\cite{Idrissi2018}]
  For each closed manifold $M$ of dimension at least four
  and each model $A$ of $M$,
  the Lambrechts--Stanley cdga $G_A(r)$ is a model of
@@ -665,22 +676,31 @@ with the two additional sets of relations:
  form corresponding to the $i$th copy of $\Sigma_g$.
  \item (Volume form) For each $i,j\in [g]$ and each
  $k\in [r]$ we have that 
- $\alpha_{i,k}\beta_{i,k} = \alpha_{j,k}\beta_{j,k}$. 
- \textcolor{trinityblue}{I do not think I understood
- what `and zero otherwise' means.}
+ $\alpha_{i,k}\beta_{i,k} = \alpha_{j,k}\beta_{j,k}$, while $\alpha_{i,k}\beta_{j,k'}=0$
+ for $k=k'$ but $i\neq j$, and for $i=j$
+ but $k\neq k'$.
  \end{enumerate}
  Remark that the relations that hold in $A$ (the canonical model
  of $\Sigma_g$) are implicit throughout. Let us write this
  model $G_{\Sigma_g}^\mathrm{fr}(r)$. With this at hand, we
  have the following result:
  
- \begin{theorem}[Campos--Idrissi--Willwacher~\cite{}] 
+ \begin{theorem}[Campos--Idrissi--Willwacher~\cite{campos2020configuration}] 
  The Hopf cooperad $G_{\Sigma_g}^\mathrm{fr}$ is a 
  real model of $D_{\Sigma_g}^{\mathrm{fr}}$.
  \end{theorem}
 
+\section*{Acknowledgements}
+
+The note-taker would like to thank the organizers of \emph{Viva
+Talbot 2021} for their assistance and flexibility during the
+production of these notes, and to Najib Idrissi for pointing
+out useful references and giving feedback on preliminary versions
+of them. All inaccuracies, errors and omissions are my own.
+Any comment, correction or feedback is very much
+appreciated.
  
- \pagebreak
+ 
  
  
  

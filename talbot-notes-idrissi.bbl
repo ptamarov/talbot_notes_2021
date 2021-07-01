@@ -10,6 +10,23 @@
        pages={227\ndash 231},
 }
 
+\bib{Boardman1973}{book}{
+      author={Boardman, J.~M.},
+      author={Vogt, R.~M.},
+       title={Homotopy invariant algebraic structures on topological spaces},
+   publisher={Springer Berlin Heidelberg},
+        date={1973},
+         url={https://doi.org/10.1007/bfb0068547},
+}
+
+\bib{campos2020configuration}{misc}{
+      author={Campos, Ricardo},
+      author={Idrissi, Najib},
+      author={Willwacher, Thomas},
+       title={Configuration spaces of surfaces},
+        date={2020},
+}
+
 \bib{BoavidadeBrito2021}{article}{
       author={de~Brito, Pedro~Boavida},
       author={Horel, Geoffroy},
@@ -25,7 +42,7 @@
       author={Neuwirth, Lee},
        title={Configuration spaces.},
         date={1962-06},
-     journal={{MATHEMATICA} {SCANDINAVICA}},
+     journal={Mathematica Scandinavica},
       volume={10},
        pages={111},
          url={https://doi.org/10.7146/math.scand.a-10517},
@@ -45,11 +62,57 @@
       review={\MR{1802847}},
 }
 
+\bib{Fresse2009}{book}{
+      author={Fresse, Benoit},
+       title={Modules over operads and functors},
+      series={Lecture Notes in Mathematics},
+   publisher={Springer-Verlag, Berlin},
+        date={2009},
+      volume={1967},
+        ISBN={978-3-540-89055-3},
+}
+
+\bib{FresseBook1}{book}{
+      author={Fresse, Benoit},
+       title={Homotopy of operads and {G}rothendieck-{T}eichm\"{u}ller groups.
+  {P}art 1},
+      series={Mathematical Surveys and Monographs},
+   publisher={American Mathematical Society, Providence, RI},
+        date={2017},
+      volume={217},
+        ISBN={978-1-4704-3481-6},
+         url={https://doi.org/10.1090/surv/217.1},
+        note={The algebraic theory and its topological background},
+      review={\MR{3643404}},
+}
+
+\bib{FresseBook2}{book}{
+      author={Fresse, Benoit},
+       title={Homotopy of operads and {G}rothendieck-{T}eichm\"{u}ller groups.
+  {P}art 2},
+      series={Mathematical Surveys and Monographs},
+   publisher={American Mathematical Society, Providence, RI},
+        date={2017},
+      volume={217},
+        ISBN={978-1-4704-3482-3},
+         url={https://doi.org/10.1090/surv/217.2},
+        note={The applications of (rational) homotopy theory methods},
+      review={\MR{3616816}},
+}
+
 \bib{Fresse2018}{misc}{
       author={Fresse, Benoit},
       author={Willwacher, Thomas},
        title={The intrinsic formality of $e_n$-operads},
         date={2018},
+}
+
+\bib{giansiracusa2010formality}{misc}{
+      author={Giansiracusa, Jeffrey},
+      author={Salvatore, Paolo},
+       title={Formality of the framed little 2-discs operad and semidirect
+  products},
+        date={2010},
 }
 
 \bib{Hinich2003}{article}{
@@ -65,6 +128,66 @@
       review={\MR{1978336}},
 }
 
+\bib{Hurwitz1891}{article}{
+      author={Hurwitz, A.},
+       title={Ueber {R}iemann'sche {F}l\"achen mit gegebenen
+  {V}erzweigungspunkten},
+        date={1891-03},
+     journal={Mathematische Annalen},
+      volume={39},
+      number={1},
+       pages={1\ndash 60},
+         url={https://doi.org/10.1007/bf01199469},
+}
+
+\bib{Idrissi2018}{article}{
+      author={Idrissi, Najib},
+       title={The {L}ambrechts--{S}tanley model of configuration spaces},
+        date={2018-12},
+     journal={Inventiones mathematicae},
+      volume={216},
+      number={1},
+       pages={1\ndash 68},
+         url={https://doi.org/10.1007/s00222-018-0842-9},
+}
+
+\bib{khoroshkin2017real}{misc}{
+      author={Khoroshkin, Anton},
+      author={Willwacher, Thomas},
+       title={Real models for the framed little $n$-disks operads},
+        date={2017},
+}
+
+\bib{knudsen2018configuration}{misc}{
+      author={Knudsen, Ben},
+       title={Configuration spaces in algebraic topology},
+        date={2018},
+}
+
+\bib{Kohno1985}{article}{
+      author={Kohao, Toshitake},
+       title={S\'erie de {P}oincar\'e-{K}oszul associ\'ee aux groupes de
+  tresses pures},
+        date={1985-02},
+     journal={Inventiones Mathematicae},
+      volume={82},
+      number={1},
+       pages={57\ndash 75},
+         url={https://doi.org/10.1007/bf01394779},
+}
+
+\bib{Kontsevich2003}{article}{
+      author={Kontsevich, Maxim},
+       title={Deformation quantization of {P}oisson manifolds},
+        date={2003},
+        ISSN={0377-9017},
+      volume={66},
+      number={3},
+       pages={157\ndash 216},
+      eprint={q-alg/9709040},
+      review={\MR{2062626}},
+}
+
 \bib{LambrechtsVolic2014}{book}{
       author={Lambrechts, Pascal},
       author={Voli\'c, Ismar},
@@ -78,11 +201,72 @@
         note={The algebraic theory and its topological background},
 }
 
+\bib{Longoni2005}{article}{
+      author={Longoni, Riccardo},
+      author={Salvatore, Paolo},
+       title={Configuration spaces are not homotopy invariant},
+        date={2005},
+        ISSN={0040-9383},
+     journal={Topology},
+      volume={44},
+      number={2},
+       pages={375\ndash 380},
+      review={\MR{2114713}},
+}
+
+\bib{May1972}{book}{
+      author={May, J.~P.},
+       title={The geometry of iterated loop spaces},
+   publisher={Springer Berlin Heidelberg},
+        date={1972},
+         url={https://doi.org/10.1007/bfb0067491},
+}
+
+\bib{Moriya2017}{article}{
+      author={Moriya, Syunji},
+       title={Non-formality of the odd dimensional framed little balls
+  operads},
+        date={2017-07},
+     journal={International Mathematics Research Notices},
+      volume={2019},
+      number={2},
+       pages={625\ndash 639},
+         url={https://doi.org/10.1093/imrn/rnx144},
+}
+
+\bib{Munson2010}{misc}{
+      author={Munson, Brian~A.},
+       title={Introduction to the manifold calculus of {G}oodwillie--{W}eiss},
+        date={2010},
+}
+
 \bib{Petersen2013}{misc}{
       author={Petersen, Dan},
        title={Minimal models, gt-action and formality of the little disk
   operad},
         date={2013},
+}
+
+\bib{Quillen1969}{article}{
+      author={Quillen, Daniel},
+       title={Rational homotopy theory},
+        date={1969-09},
+     journal={The Annals of Mathematics},
+      volume={90},
+      number={2},
+       pages={205},
+         url={https://doi.org/10.2307/1970725},
+}
+
+\bib{Stasheff1963}{article}{
+      author={Stasheff, James~Dillon},
+       title={Homotopy associativity of {H}-spaces {I}.},
+        date={1963-08},
+     journal={Transactions of the American Mathematical Society},
+      volume={108},
+      number={2},
+       pages={275},
+         url={https://doi.org/10.2307/1993608},
 }
 
 \bib{Tamarkin2003}{article}{
