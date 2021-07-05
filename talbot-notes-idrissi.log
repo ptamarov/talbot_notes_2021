@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=pdflatex 2021.5.31)  1 JUL 2021 12:37
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=pdflatex 2021.5.31)  5 JUL 2021 11:49
 entering extended mode
 **./talbot-notes-idrissi.tex
 (talbot-notes-idrissi.tex
@@ -1350,9 +1350,13 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [3]
 
+LaTeX Font Warning: Font shape `OT1/cmss/m/n' in size <5.50012> not available
+(Font)              size <6> substituted on input line 216.
+
+
 Package amsrefs Warning: Use of \cites is recommended instead of \cite 
 (amsrefs)                for multiple cites 'Fresse2009,FresseBook1,FresseBook2
-' on input line 239.
+' on input line 241.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1364,7 +1368,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [4]
 Package hyperref Info: bookmark level for unknown question* defaults to 0 on in
-put line 276.
+put line 278.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1375,12 +1379,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.04503pt}.
 
 [5]
-
-LaTeX Font Warning: Font shape `OT1/cmss/m/n' in size <5.50012> not available
-(Font)              size <6> substituted on input line 372.
-
-
-Overfull \hbox (13.04616pt too wide) in paragraph at lines 402--410
+Overfull \hbox (13.04616pt too wide) in paragraph at lines 404--412
 \OT1/ztmcm/m/n/11 
 [](\OML/ztmcm/m/it/11 D[]\OT1/ztmcm/m/n/11 )$\T1/ptm/m/n/11 , tak-ing into ac-c
 ount that the former is (al-most) a co-operad ---the func-tor $\OT1/ztmcm/m/n/1
@@ -1415,10 +1414,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.04503pt}.
 
 [8]
-<braids.png, id=213, 542.025pt x 304.88907pt>
+<braids.png, id=216, 542.025pt x 304.88907pt>
 File: braids.png Graphic file (type png)
 <use braids.png>
-Package pdftex.def Info: braids.png  used on input line 554.
+Package pdftex.def Info: braids.png  used on input line 556.
 (pdftex.def)             Requested size: 81.30023pt x 45.73138pt.
 
 
@@ -1641,11 +1640,11 @@ Package rerunfilecheck Info: File `talbot-notes-idrissi.out' has not changed.
 ### semi simple group (level 1) entered at line 115 (\begingroup)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 30487 strings out of 479076
- 553252 string characters out of 2860427
+ 30490 strings out of 479076
+ 553272 string characters out of 2860427
  899070 words of memory out of 3000000
  47345 multiletter control sequences out of 15000+600000
- 524473 words of font info for 239 fonts, out of 8000000 for 9000
+ 525103 words of font info for 241 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  115i,15n,122p,865b,9919s stack positions out of 5000i,500n,10000p,200000b,80000s
  <C:\Users\Pedro\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknap
@@ -1655,18 +1654,19 @@ m Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/
 MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2
 .9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/
 type1/public/amsfonts/cm/cmss10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pu
-blic/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/ams
-fonts/euler/eufm10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts
-/symbols/msam10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/sy
-mbols/msbm10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/old-arrows/oas
-y10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/rsfs/rsfs10.pfb><C:/Pro
-gram Files/MiKTeX 2.9/fonts/type1/urw/symbol/usyr.pfb><C:/Program Files/MiKTeX 
-2.9/fonts/type1/urw/symbol/usyr.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/ur
-w/times/utmb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pf
-b><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on talbot-notes-idrissi.pdf (12 pages, 234971 bytes).
+blic/amsfonts/cm/cmss9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsf
+onts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/eul
+er/eufm10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/
+msam10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msb
+m10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/old-arrows/oasy10.pfb><
+C:/Program Files/MiKTeX 2.9/fonts/type1/public/rsfs/rsfs10.pfb><C:/Program File
+s/MiKTeX 2.9/fonts/type1/urw/symbol/usyr.pfb><C:/Program Files/MiKTeX 2.9/fonts
+/type1/urw/symbol/usyr.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/u
+tmb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Pro
+gram Files/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
+Output written on talbot-notes-idrissi.pdf (12 pages, 243263 bytes).
 PDF statistics:
- 421 PDF objects out of 1000 (max. 8388607)
- 145 named destinations out of 1000 (max. 500000)
+ 427 PDF objects out of 1000 (max. 8388607)
+ 146 named destinations out of 1000 (max. 500000)
  82 words of extra memory for PDF output out of 10000 (max. 10000000)
 

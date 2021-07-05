@@ -213,7 +213,7 @@ this at hand, what we want is an equivariant associative map
  unframed manifolds ---those with possibly non-trivial 
  tangent bundle--- one needs to look instead at \emph{framed}
  configurations, where each point (or little disk) is
- decorated with a frame, and we will use the superscript
+ decorated with a frame\footnote{That is, we pick an element of $\mathsf{SO}(n)$ and a configuration of disks to define an element in $D_n^{\mathrm{fr}}$}, and we will use the superscript
  $\mathrm{fr}$ to denote this. 
  
  We now observe that an embedding $f:M\longrightarrow N$
@@ -234,7 +234,9 @@ this at hand, what we want is an equivariant associative map
  three in $N$, then the map above induces a homotopy
  equivalence
  \[ \label{eq:derivedMap}
- 	\Emb(M,N) \longrightarrow \mathbb R \Map_{D_m}(D_M,D_N)\]
+ 	\Emb(M,N) \longrightarrow 
+ 		\mathbb R \Map_{D_m^\mathrm{fr}}
+ 			(D_M^\mathrm{fr},D_N^\mathrm{fr})\]
  where the right hand side is the \emph{derived}\footnote{For 
  details, the reader can consult the work of B. Fresse~\cite{Fresse2009,FresseBook1,FresseBook2}.} 
  mapping space of $D_m^\mathrm{fr}$-module maps $D_M^\mathrm{fr}\longrightarrow D_N^\mathrm{fr}$.
